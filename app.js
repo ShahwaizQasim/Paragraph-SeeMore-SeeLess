@@ -1,13 +1,11 @@
-const paragraph = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptas blanditiis voluptate dolorem voluptatum excepturi, eos aliquid illo dolore autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptas blanditiis voluptate dolorem voluptatum excepturi, eos aliquid illo dolore autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptas blanditiis voluptate dolorem voluptatum excepturi, eos aliquid illo dolore autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptas blanditiis voluptate dolorem voluptatum excepturi, eos aliquid illo dolore autem.`;
 
-const myText = document.querySelector("#myParagraph");
+const paragraph = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptas blanditiis voluptate dolorem voluptatum excepturi, eos aliquid illo dolore autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptas blanditiis voluptate dolorem voluptatum excepturi, eos aliquid illo dolore autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptas blanditiis voluptate dolorem voluptatum excepturi, eos aliquid illo dolore autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptas blanditiis voluptate dolorem voluptatum excepturi, eos aliquid illo dolore autem.`;
+const element = document.querySelector("#myParagraph");
 
 window.seeMore = () => {
-    myText.innerHTML = paragraph + "<a onClick='seeLess(event)'> see less...</a>";
-    // console.log(event);
-}
-
+    element.innerHTML = `${paragraph} <a onclick="seeLess(event)"> see less... </a>`
+    }
 window.seeLess = () => {
-    myText.innerHTML = paragraph.slice(0,304) + "<a onClick ='seeMore(event)'> see more...</a>";
+    element.innerHTML = `${paragraph.slice(0,305)} <a onclick="seeMore(event)"> see more... </a>`;
 }
 seeLess();
